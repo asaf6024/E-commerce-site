@@ -15,6 +15,7 @@ import DrinkPage from './pages/DrinkPage';
 import DesertPage from './pages/DesertPage';
 import AddDessert from './components/Dessert/AddDessert'
 import UpdateDessert from './components/Dessert/UpdateDessert'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
 
         </Switch>
       </Router>
+      <Footer />
     </div>
 
   );

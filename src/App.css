@@ -24,6 +24,7 @@ html {
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  bottom: 5px;
 }
 .chartButton:hover,
 .trashButton:hover {
@@ -82,6 +83,7 @@ img:hover {
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  bottom: 5px;
 }
 input[type="number"],
 select {
