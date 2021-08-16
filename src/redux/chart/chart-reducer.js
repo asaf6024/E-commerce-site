@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    console.log('state', state)
+    console.log('chart is', state)
     switch (action.type) {
         case "GET_CHART":
             return { ...state };
@@ -35,9 +35,14 @@ export default function (state = initialState, action) {
                 chart: state.chart.concat(action.payload)
             };
         case "UPDATE_CHART_BY_ID":
+            let myArray = [...state.chart]
+            //Find index of specific object using findIndex method.    
+            let objIndex = state.chart.findIndex((obj => obj.id == action.payload.id));
+            myArray[objIndex] = action.payload;
             return {
                 ...state,
-                chart: state.chart.forEach((item) => item.id == action.payload[0].id ? item = action.payload[0] : item)
+                chart: myArray
+                // chart: state.chart.map(item => item.id == action.payload.id ? item = action.payload : item)
             };
 
         // return {

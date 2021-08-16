@@ -33,30 +33,33 @@ const Update = (props) => {
         let price = 0;
         console.log('price element', document.getElementById('quantity').value)
 
-        copiedArray[0].sizes.forEach(s => {
-            if (s.price == priceOfOrder) {
-                s.selected = true;
-                price = s.price
-            }
-            else
-                s.selected = false
-        });
+        // console.log('quantity', quantity)
+        copiedArray.map(copied => {
 
-        let obj = [
-            {
-                ...copiedArray[0],
-                'quantity': quantity,
-                'totalPrice': Number(quantity) * Number(price)
-            }
-        ]
+            copied.quantity = quantity;
+            copied.totalPrice = Number(quantity) != undefined ? Number(quantity) * Number(priceOfOrder) : 1 * Number(priceOfOrder);
+            copied.price = priceOfOrder
 
-        console.log('obj', obj)
-        update_chart_by_id(obj)
+            copied.sizes.forEach(s => {
+                if (s.price == priceOfOrder) {
+                    s.selected = true;
+                    price = s.price
+                }
+                else
+                    s.selected = false
+            });
+
+        })
+
+
+        props.update_chart_by_id(copiedArray[0])
     }
     const setQunatityForUpdate = (qnt) => {
         setQunatity(qnt)
     }
-
+    const deleteChart = (id) => {
+        props.delete_chart_by_id(Number(id))
+    }
     return (
         <div>
             <div className='container-fluid'>
@@ -79,7 +82,7 @@ const Update = (props) => {
                                     setCurrentPrice={setCurrentPrice}
                                     currentPrice={currentPrice}
                                     updateForChart={updateForChart}
-                                    delete_chart_by_id={delete_chart_by_id}
+                                    deleteChart={deleteChart}
                                 />
                             }
 

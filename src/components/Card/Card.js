@@ -6,11 +6,11 @@ const Card = (props) => {
     const history = useHistory()
 
     useEffect(() => {
-        console.log('data', props.data)
+        // console.log('data', props.data)
         props.isUpdate &&
             props.setQunatity(null)
 
-        console.log('props.quantity', props.quantity)
+        // console.log('props.quantity', props.quantity)
     }, [])
 
     return (
@@ -86,12 +86,12 @@ const Card = (props) => {
                                         <span>{p.totalPrice != null ? 'Update' : 'Add to Shopping cart'}</span>
                                     </button>
                                     {p.totalPrice != null &&
-                                        <button className=' trashButton btn-danger col-sm-10'>
-                                            <span onClick={() => {
-                                                props.delete_chart_by_id(p.id)
-                                                history.push(`../add/${p.id}`)
-                                            }
-                                            }>
+                                        <button className=' trashButton btn-danger col-sm-10' onClick={(e) => {
+                                            props.deleteChart(props.productId)
+                                            history.push(`../add/${p.id}`)
+                                        }
+                                        }>
+                                            <span >
                                                 Remove from cart</span>
                                         </button>
                                     }

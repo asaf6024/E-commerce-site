@@ -51,29 +51,15 @@ const Update = (props) => {
             });
 
         })
-        // copiedArray[0].sizes.forEach(s => {
-        //     if (s.price == priceOfOrder) {
-        //         s.selected = true;
-        //         price = s.price
-        //     }
-        //     else
-        //         s.selected = false
-        // });
-
-        let obj = [
-            {
-                ...copiedArray[0]
-                // 'quantity': quantity,
-                // 'totalPrice': Number(quantity) != undefined ? Number(quantity) * Number(priceOfOrder) : 1 * Number(priceOfOrder),
-                // 'price': priceOfOrder
-            }
-        ]
 
         // console.log('obj', obj)
-        update_chart_by_id(obj)
+        props.update_chart_by_id(copiedArray[0])
     }
     const setQunatityForUpdate = (qnt) => {
         setQunatity(qnt)
+    }
+    const deleteChart = (id) => {
+        props.delete_chart_by_id(Number(id))
     }
 
     return (
@@ -98,7 +84,7 @@ const Update = (props) => {
                                     setCurrentPrice={setCurrentPrice}
                                     currentPrice={currentPrice}
                                     updateForChart={updateForChart}
-                                    delete_chart_by_id={delete_chart_by_id}
+                                    deleteChart={deleteChart}
                                 />
                             }
 

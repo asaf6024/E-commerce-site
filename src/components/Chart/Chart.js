@@ -16,7 +16,7 @@ const ChartCom = (props) => {
     const [productToBuy, setProductToBuy] = useState([])
     const [quantity, setQunatity] = useState(1)
     const [load, setLoad] = useState(true)
-
+    let toalOfAll = 0
     useEffect(() => {
         props.get_chart()
 
@@ -80,6 +80,7 @@ const ChartCom = (props) => {
                             !load && props.chart != undefined ? (
 
                                 props.chart.map((p, index) => {
+                                    toalOfAll += p.totalPrice
                                     console.log('chart data', p)
                                     // setCurrentPrice(() => p.sizes[0].price)
                                     let qnt;
@@ -142,7 +143,6 @@ const ChartCom = (props) => {
                                                 </MDBCard>
 
                                             </MDBCol>
-
                                         </>
 
                                         // </div>
@@ -153,19 +153,19 @@ const ChartCom = (props) => {
                                 : ''
                             // <h4>Loading</h4>
                         }
-                        {/* {
+                        {
                             !load &&
-                            <MDBRow>
-                                <MDBCol className='text-center'>
-                                    <MDBCard>
-                                        <h2 className='text-dark'>Total is: {props.chart.reduce((b, c) => b.totalPrice + c.totalPrice)}</h2>
-                                    </MDBCard>
-                                </MDBCol>
-                            </MDBRow>
-                        } */}
+                            <MDBCol sm='12' className='text-center'>
+                                <MDBCard>
+                                    <h2 className='text-dark'>Total is: {toalOfAll} ₪ </h2>
+                                </MDBCard>
+                            </MDBCol>
+                        }
                     </MDBRow>
 
+
                 </MDBCard>
+
 
             </MDBContainer>
         </div >
