@@ -58,9 +58,9 @@ const Desert = (props) => {
         <div className="container-fluid" id='desserts'>
             <MDBContainer>
                 <h2 className='text-center font-weight-bold headlineOfProduct'>Desserts <i className="fas fa-ice-cream"></i></h2>
-                <a href='/#drinks'>
+                {/* <a href='/#drinks'>
                     <i className="fas fa-arrow-down DownArrow fa-2x"></i>
-                </a>
+                </a> */}
 
                 <MDBRow>
                     {

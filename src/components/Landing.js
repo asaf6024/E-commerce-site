@@ -10,7 +10,7 @@ const Landing = () => {
                     <MDBCol sm='12' lg='8' style={{ margin: 'auto' }}>
                         <MDBCard style={{ minHeight: '70vh' }}>
                             <div className='text-center' style={{ margin: 'auto' }}>
-                                <h1 className='font-weight-bold text-dark'>Welcome to a demo  <br />E-commerce site:<br />
+                                <h1 className='font-weight-bold text-dark'>Welcome to a demo of <br />E-commerce site:<br />
                                 </h1>
                                 <br />
                                 <h2 className='font-weight-bold text-dark'>coffee shop</h2>
