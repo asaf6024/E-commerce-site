@@ -71,11 +71,7 @@ const food = [
         name: 'Greek Salad',
         description: 'Tasty Greek Salad',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 30,
         img: '../img/greekSalad.jpg',
@@ -93,11 +89,7 @@ const food = [
         name: 'Caesar Salad',
         description: 'Tasty Caesar Salad',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 35,
         img: '../img/caesar.jpg',
@@ -115,11 +107,7 @@ const food = [
         name: 'Chicken Salad',
         description: 'Tasty Chicken Salad',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .
         `,
         price: 10,
         img: '../img/chicken.jpg',

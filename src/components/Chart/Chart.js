@@ -86,10 +86,10 @@ const ChartCom = (props) => {
                                     return (
                                         // <div className='container-fluid'>
                                         <>
-                                            <MDBCol sm='2'>
+                                            <MDBCol sm='1'>
                                                 <h2 className='text-dark text-center counter'>{index + 1}</h2>
                                             </MDBCol>
-                                            <MDBCol sm='10' className='text-left' style={{ margin: '15px auto' }}>
+                                            <MDBCol sm='11' className='text-left' style={{ margin: '15px auto' }}>
                                                 <MDBCard className='text-center' key={p.id}>
                                                     <MDBRow>
                                                         <MDBCol sm='12' lg='6' className='productDetailsCard'>

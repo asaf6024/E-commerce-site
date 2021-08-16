@@ -4,11 +4,7 @@ const products = [
         name: 'Cappuccino',
         description: 'Tasty Cappuccino',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 10,
         img: '../img/coffee.jpg',
@@ -71,11 +67,7 @@ const products = [
         name: 'Tea',
         description: 'Tasty Tea',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 10,
         img: '../img/tea.jpg',
@@ -96,11 +88,7 @@ const products = [
         name: 'Espresso',
         description: 'Tasty Espresso',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 6,
         img: '../img/espresso.jpg',
@@ -121,11 +109,7 @@ const products = [
         name: 'Americano',
         description: 'Tasty Americano',
         longDescription:
-            `Outside of Italy, 
-        cappuccino is a coffee drink that today 
-        is typically composed of a single espresso shot and hot milk,
-         with the surface topped with foamed milk.
-          Cappuccinos are most often prepared with an espresso machine.
+            `OLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
         price: 10,
         img: '../img/americano.jpg',
