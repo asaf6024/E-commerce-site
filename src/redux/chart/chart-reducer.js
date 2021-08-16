@@ -55,6 +55,8 @@ export default function (state = initialState, action) {
 
         case "DELETE_CHART_BY_ID":
             return { ...state, chart: state.chart.filter(c => c.id != action.payload) };
+        case "DELETE_CHART":
+            return { ...state, chart: [] };
         default:
             return state;
 

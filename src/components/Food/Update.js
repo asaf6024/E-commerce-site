@@ -17,6 +17,7 @@ const Update = (props) => {
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
     useEffect(() => {
+        window.scroll(0, 0)
         props.getFoodById(foodId)
         props.get_chart_by_id(foodId)
 
@@ -81,7 +82,7 @@ const Update = (props) => {
                 <MDBContainer>
                     <MDBRow>
                         <MDBCol sm='12' className='backBtn'>
-                            <span onClick={() => history.push('/')}>
+                            <span onClick={() => history.push('/food')}>
                                 <i className="fas fa-long-arrow-alt-left"></i>&nbsp;
                                 Back to Food
                             </span>

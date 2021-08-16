@@ -67,6 +67,7 @@ const Food = (props) => {
 
                 <MDBRow>
                     {
+                        props.food != undefined &&
                         loadFood
                     }
                 </MDBRow>

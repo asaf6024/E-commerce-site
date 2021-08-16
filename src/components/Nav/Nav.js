@@ -96,7 +96,7 @@ const NavPage = (props) => {
 
 
                 {/* < a href="/chart" className='col-sm-1 navFonts' title='Shoping Cart' > */}
-                <i className="fas fa-shopping-cart navItem" onClick={(e) => history.push('/chart')}></i>
+                <i className="fas fa-shopping-cart navItem" onClick={(e) => history.push('/cart')}></i>
                 {/* </a> */}
             </Navbar.Brand>
             {/* </Container> */}

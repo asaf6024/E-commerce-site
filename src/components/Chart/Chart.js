@@ -7,7 +7,7 @@ import { MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 // Redux
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { get_chart, delete_chart_by_id } from '../../redux/chart/chart-actions';
+import { get_chart, delete_chart_by_id, delete_chart } from '../../redux/chart/chart-actions';
 
 const ChartCom = (props) => {
     const history = useHistory()
@@ -31,13 +31,14 @@ const ChartCom = (props) => {
     const setLocalStorage = () => {
         localStorage.setItem('cart', JSON.stringify(props.chart));
         alert('Saved')
-        window.location.reload()
+        history.push('/cart')
+
 
     }
     const deleteLocalStorage = () => {
         localStorage.removeItem('cart')
-        alert('Deleted')
-        window.location.reload()
+        props.delete_chart()
+        // history.push('/cart')
     }
     return (
         <div className='container-fluid'>
@@ -76,7 +77,7 @@ const ChartCom = (props) => {
                     <MDBRow>
 
                         {
-                            !load ? (
+                            !load && props.chart != undefined ? (
 
                                 props.chart.map(p => {
                                     console.log('chart data', p)
@@ -144,7 +145,8 @@ const ChartCom = (props) => {
                                 })
 
                             )
-                                : <h4>Loading</h4>
+                                : ''
+                            // <h4>Loading</h4>
                         }
                         {/* {
                             !load &&
@@ -174,6 +176,7 @@ const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(
         {
             get_chart,
+            delete_chart,
             delete_chart_by_id
         },
         dispatch

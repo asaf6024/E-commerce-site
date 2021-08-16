@@ -44,6 +44,14 @@ export const delete_chart_by_id = (id) => {
         });
     }
 };
+export const delete_chart = (id) => {
+    alert('Deleted all shoping cart')
+    return (dispatch) => {
+        dispatch({
+            type: "DELETE_CHART",
+        });
+    }
+};
 
 
 

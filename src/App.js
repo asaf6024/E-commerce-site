@@ -31,7 +31,7 @@ function App() {
           {/* Drinks */}
           <Route exact path="/product/add/:productId" component={Add} />
           <Route exact path="/product/update/:productId" component={Update} />
-          <Route exact path="/chart" component={Chart} />
+          <Route exact path="/cart" component={Chart} />
 
           {/* Food */}
           <Route exact path="/food/add/:foodId" component={AddFood} />

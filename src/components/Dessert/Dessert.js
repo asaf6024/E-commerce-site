@@ -13,7 +13,6 @@ const Desert = (props) => {
     let history = useHistory()
 
     useEffect(() => {
-        // props.getDesserts()
         props.get_chart()
     }, [])
 

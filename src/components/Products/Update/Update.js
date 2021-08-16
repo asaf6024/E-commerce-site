@@ -17,7 +17,7 @@ const Update = (props) => {
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
     useEffect(() => {
-        // props.getProductById(productId)
+        window.scroll(0, 0)
         props.get_chart_by_id(productId)
 
     }, [])
@@ -63,7 +63,7 @@ const Update = (props) => {
                 <MDBContainer>
                     <MDBRow>
                         <MDBCol sm='12' className='backBtn'>
-                            <span onClick={() => history.push('/')}>
+                            <span onClick={() => history.push('/drinks')}>
                                 <i className="fas fa-long-arrow-alt-left"></i>&nbsp;
                                 Back to Drinks
                             </span>

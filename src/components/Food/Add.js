@@ -19,6 +19,7 @@ const Add = (props) => {
     const [size, setSize] = useState('small')
 
     useEffect(() => {
+        window.scroll(0, 0)
         props.getFoodById(foodId)
         props.get_chart()
 
@@ -64,10 +65,11 @@ const Add = (props) => {
                                 <MDBContainer>
                                     <MDBRow>
                                         <MDBCol sm='12' className='backBtn'>
-                                            <span onClick={() => history.push('/food')}>
+                                            <span onClick={() => history.goBack()}>
                                                 <i className="fas fa-long-arrow-alt-left"></i>&nbsp;
                                                 Back to Food
                                             </span>
+                                            <br />
                                         </MDBCol>
                                         <MDBCol sm='12'>
                                             <Card
