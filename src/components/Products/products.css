@@ -1,0 +1,14 @@
+.productCard {
+  margin-bottom: 20px;
+}
+.productCard img {
+  height: 200px;
+  width: inherit;
+}
+.productCard i.fas.fa-info-circle {
+  position: absolute;
+  top: 50px;
+  /* background: white; */
+  color: white;
+  cursor: pointer;
+}

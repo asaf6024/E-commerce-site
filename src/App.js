@@ -1,57 +1,49 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import Home from './pages/Home'
+import Add from './components/Products/Add/Add'
+import AddFood from './components/Food/Add'
+import Chart from './components/Chart/Chart';
+import { MDBContainer } from 'mdbreact';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from './components/Nav/Nav';
+import Update from './components/Products/Update/Update';
+import UpdateFood from './components/Food/Update';
+import FoodPage from './pages/FoodPage';
+import DrinkPage from './pages/DrinkPage';
+import DesertPage from './pages/DesertPage';
+import AddDessert from './components/Dessert/AddDessert'
+import UpdateDessert from './components/Dessert/UpdateDessert'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div>
+      <Router>
+        <Nav />
+        <Switch>
+          {/* pages */}
+          <Route exact path="/" component={Home} />
+          <Route exact path="/food/" component={FoodPage} />
+          <Route exact path="/drinks/" component={DrinkPage} />
+          <Route exact path="/desserts/" component={DesertPage} />
+          {/* Drinks */}
+          <Route exact path="/product/add/:productId" component={Add} />
+          <Route exact path="/product/update/:productId" component={Update} />
+          <Route exact path="/chart" component={Chart} />
+
+          {/* Food */}
+          <Route exact path="/food/add/:foodId" component={AddFood} />
+          <Route exact path="/food/update/:foodId" component={UpdateFood} />
+
+          {/* Dessert */}
+          <Route exact path="/desserts/add/:dessertId" component={AddDessert} />
+          <Route exact path="/desserts/update/:dessertId" component={UpdateDessert} />
+
+        </Switch>
+      </Router>
     </div>
+
   );
 }
 
