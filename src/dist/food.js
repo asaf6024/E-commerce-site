@@ -66,81 +66,72 @@ const food = [
             }
         ]
     },
-    // {
-    //     id: 4,
-    //     name: 'Tea',
-    //     description: 'Tasty coffee',
-    //     longDescription:
-    //         `Outside of Italy, 
-    //     cappuccino is a coffee drink that today 
-    //     is typically composed of a single espresso shot and hot milk,
-    //      with the surface topped with foamed milk.
-    //       Cappuccinos are most often prepared with an espresso machine.
-    //     `,
-    //     price: 10,
-    //     img: '../img/tea.jpg',
-    //     sizes: [
-    //         {
-    //             name: 'small', price: '10', selected: true
-    //         },
-    //         {
-    //             name: 'medium', price: '12', selected: false
-    //         },
-    //         {
-    //             name: 'large', price: '15', selected: false
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: 5,
-    //     name: 'Espresso',
-    //     description: 'Tasty coffee',
-    //     longDescription:
-    //         `Outside of Italy, 
-    //     cappuccino is a coffee drink that today 
-    //     is typically composed of a single espresso shot and hot milk,
-    //      with the surface topped with foamed milk.
-    //       Cappuccinos are most often prepared with an espresso machine.
-    //     `,
-    //     price: 6,
-    //     img: '../img/espresso.jpg',
-    //     sizes: [
-    //         {
-    //             name: 'short', price: '6', selected: true
-    //         },
-    //         {
-    //             name: 'medium', price: '8', selected: false
-    //         },
-    //         {
-    //             name: 'long', price: '10', selected: false
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: 6,
-    //     name: 'Americano',
-    //     description: 'Tasty coffee',
-    //     longDescription:
-    //         `Outside of Italy, 
-    //     cappuccino is a coffee drink that today 
-    //     is typically composed of a single espresso shot and hot milk,
-    //      with the surface topped with foamed milk.
-    //       Cappuccinos are most often prepared with an espresso machine.
-    //     `,
-    //     price: 10,
-    //     img: '../img/americano.jpg',
-    //     sizes: [
-    //         {
-    //             name: 'small', price: '10', selected: true
-    //         },
-    //         {
-    //             name: 'medium', price: '12', selected: false
-    //         },
-    //         {
-    //             name: 'large', price: '15', selected: false
-    //         }
-    //     ]
-    // },
+    {
+        id: 24,
+        name: 'Greek Salad',
+        description: 'Tasty Greek Salad',
+        longDescription:
+            `Outside of Italy, 
+        cappuccino is a coffee drink that today 
+        is typically composed of a single espresso shot and hot milk,
+         with the surface topped with foamed milk.
+          Cappuccinos are most often prepared with an espresso machine.
+        `,
+        price: 30,
+        img: '../img/greekSalad.jpg',
+        sizes: [
+            {
+                name: 'medium', price: '30', selected: false
+            },
+            {
+                name: 'large', price: '45', selected: false
+            }
+        ]
+    },
+    {
+        id: 25,
+        name: 'Caesar Salad',
+        description: 'Tasty Caesar Salad',
+        longDescription:
+            `Outside of Italy, 
+        cappuccino is a coffee drink that today 
+        is typically composed of a single espresso shot and hot milk,
+         with the surface topped with foamed milk.
+          Cappuccinos are most often prepared with an espresso machine.
+        `,
+        price: 35,
+        img: '../img/caesar.jpg',
+        sizes: [
+            {
+                name: 'medium', price: '35', selected: false
+            },
+            {
+                name: 'large', price: '50', selected: false
+            }
+        ]
+    },
+    {
+        id: 26,
+        name: 'Chicken Salad',
+        description: 'Tasty Chicken Salad',
+        longDescription:
+            `Outside of Italy, 
+        cappuccino is a coffee drink that today 
+        is typically composed of a single espresso shot and hot milk,
+         with the surface topped with foamed milk.
+          Cappuccinos are most often prepared with an espresso machine.
+        `,
+        price: 10,
+        img: '../img/chicken.jpg',
+        sizes: [
+            {
+                name: 'medium', price: '40', selected: false
+            },
+            {
+                name: 'large', price: '60', selected: false
+            }
+        ]
+    },
 
 
 

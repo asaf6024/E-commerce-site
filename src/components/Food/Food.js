@@ -29,7 +29,7 @@ const Food = (props) => {
                 {/* <i className="fas fa-info-circle fa-2x" title='info'
                     onClick={() => history.push(`/product/${product.id}`)}
                 ></i> */}
-                <p>{product.description}</p>
+                <p className='productDescription'>{product.description}</p>
                 <b className='productPrice'>{product.price} ₪</b>
                 <button className='btn' onClick={() =>
                     classActive != '' ? history.push(`/food/update/${product.id}`) : history.push(`/food/add/${product.id}`)

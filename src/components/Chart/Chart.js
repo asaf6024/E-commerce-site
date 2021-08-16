@@ -79,66 +79,71 @@ const ChartCom = (props) => {
                         {
                             !load && props.chart != undefined ? (
 
-                                props.chart.map(p => {
+                                props.chart.map((p, index) => {
                                     console.log('chart data', p)
                                     // setCurrentPrice(() => p.sizes[0].price)
                                     let qnt;
                                     return (
                                         // <div className='container-fluid'>
-                                        <MDBCol sm='8' style={{ margin: '15px auto' }}>
-                                            <MDBCard className='text-center' key={p.id}>
-                                                <MDBRow>
-                                                    <MDBCol sm='12' lg='6' className='productDetailsCard'>
-                                                        <img src={p.img} />
+                                        <>
+                                            <MDBCol sm='2'>
+                                                <h2 className='text-dark text-center counter'>{index + 1}</h2>
+                                            </MDBCol>
+                                            <MDBCol sm='10' className='text-left' style={{ margin: '15px auto' }}>
+                                                <MDBCard className='text-center' key={p.id}>
+                                                    <MDBRow>
+                                                        <MDBCol sm='12' lg='6' className='productDetailsCard'>
+                                                            <img className='cardImg' src={p.img} />
 
-                                                    </MDBCol>
-                                                    <MDBCol sm='12' lg='6' className='productDetailsCard'>
-                                                        <h2 className='col-sm-12 text-dark'>{p.name}</h2>
-                                                        <p className='col-sm-12'>{p.description}</p>
-                                                        <div className='col-sm-8 text-left' >
-                                                            {/* <b className='col-sm-6'>Price</b> */}
-                                                            {/* <span className='col-sm-6' id='pr   ice'> ₪ {p.totalPrice}</span> */}
-                                                            {/* <br /> */}
-                                                            <b className='col-sm-8'>Size:</b>
-                                                            {
-                                                                p.sizes.map((size, index) => {
-                                                                    return <span>{size.selected && size.name}</span>
-                                                                })
-                                                            }
-                                                            <br />
-                                                            <b className='col   -sm-8'>Price:</b>
+                                                        </MDBCol>
+                                                        <MDBCol sm='12' lg='6' className='productDetailsCard'>
+                                                            <h2 className='col-sm-12 text-dark'>{p.name}</h2>
+                                                            <p className='col-sm-12'>{p.description}</p>
+                                                            <div className='col-sm-8 text-left' >
+                                                                {/* <b className='col-sm-6'>Price</b> */}
+                                                                {/* <span className='col-sm-6' id='pr   ice'> ₪ {p.totalPrice}</span> */}
+                                                                {/* <br /> */}
+                                                                <b className='col-sm-8'>Size:</b>
+                                                                {
+                                                                    p.sizes.map((size, index) => {
+                                                                        return <span>{size.selected && size.name}</span>
+                                                                    })
+                                                                }
+                                                                <br />
+                                                                <b className='col   -sm-8'>Price:</b>
 
-                                                            {
-                                                                p.sizes.map((size, index) => {
-                                                                    return <span>{size.selected ? qnt = size.price + ' ₪ ' : ''}</span>
+                                                                {
+                                                                    p.sizes.map((size, index) => {
+                                                                        return <span>{size.selected ? qnt = size.price + ' ₪ ' : ''}</span>
 
-                                                                })
-                                                            }
+                                                                    })
+                                                                }
+                                                                <br />
+                                                                <b className='col-sm-8'>Quantity:</b>
+                                                                <span>{p.quantity}</span>
+                                                                <br />
+                                                                <b className='col-sm-8'>Total Price:</b>
+                                                                <span>{p.totalPrice} ₪ </span>
+                                                            </div>
                                                             <br />
-                                                            <b className='col-sm-8'>Quantity:</b>
-                                                            <span>{p.quantity}</span>
-                                                            <br />
-                                                            <b className='col-sm-8'>Total Price:</b>
-                                                            <span>{p.totalPrice} ₪ </span>
-                                                        </div>
-                                                        <br />
-                                                        <button className='chartButton col-sm-10' onClick={() =>
-                                                            history.push(p.id < 10 ? `/product/update/${p.id}` : `/food/update/${p.id}`)
-                                                        }>
-                                                            Update</button>
-                                                        <button className='trashButton btn-danger col-sm-10'>
-                                                            <span onClick={() => props.delete_chart_by_id(p.id)
+                                                            <button className='chartButton col-sm-10' onClick={() =>
+                                                                history.push(p.id < 10 ? `/product/update/${p.id}` : p.id < 30 ? `/food/update/${p.id}` : `/desserts/update/${p.id}`)
                                                             }>
-                                                                Remove from cart</span>
-                                                        </button>
+                                                                Update</button>
+                                                            <button className='trashButton btn-danger col-sm-10'>
+                                                                <span onClick={() => props.delete_chart_by_id(p.id)
+                                                                }>
+                                                                    Remove from cart</span>
+                                                            </button>
 
-                                                    </MDBCol>
-                                                </MDBRow>
+                                                        </MDBCol>
+                                                    </MDBRow>
 
-                                            </MDBCard>
+                                                </MDBCard>
 
-                                        </MDBCol>
+                                            </MDBCol>
 
+                                        </>
 
                                         // </div>
                                     )

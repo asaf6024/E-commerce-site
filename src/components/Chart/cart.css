@@ -5,3 +5,11 @@ button {
   /* background-color: white !important; */
   color: black !important;
 }
+.counter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  /* color: #fff; */
+  /* text-align: center; */
+  transform: translateX(-50%) translateY(-50%);
+}

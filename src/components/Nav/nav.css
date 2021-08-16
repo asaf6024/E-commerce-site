@@ -97,4 +97,15 @@ a:hover {
   .mobileHr {
     display: block;
   }
+  nav#navBar {
+    background: #212529 !important;
+  }
+  .titleOfNav.navbar-brand {
+    position: relative;
+    top: 15px;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }

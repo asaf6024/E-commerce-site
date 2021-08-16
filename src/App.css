@@ -110,6 +110,12 @@ hr {
 .productPrice {
   font-style: italic;
 }
+.productDescription {
+  margin: 0;
+}
+.cardImg {
+  height: 100%;
+}
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
