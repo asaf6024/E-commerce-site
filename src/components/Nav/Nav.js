@@ -5,6 +5,11 @@ import { MDBAnimation, MDBTooltip } from 'mdbreact'
 // import { a } from "react-router-dom";
 import './nav.css'
 
+// Redux
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { get_chart } from '../../redux/chart/chart-actions';
+
 const NavPage = (props) => {
     let history = useHistory()
     const [active, setACtive] = useState('activea')
@@ -13,6 +18,8 @@ const NavPage = (props) => {
 
         window.addEventListener("scroll", handleScroll);
         setACtive('home')
+
+        props.get_chart()
         // if (window.scrollY > 20)
         //     document.getElementById('navBar').style.background = '#212529'
     })
@@ -96,6 +103,7 @@ const NavPage = (props) => {
 
 
                 {/* < a href="/chart" className='col-sm-1 navFonts' title='Shoping Cart' > */}
+                <span className="badge badge-pill red">{props.chart.length}</span>
                 <i className="fas fa-shopping-cart navItem" onClick={(e) => history.push('/cart')}></i>
                 {/* </a> */}
             </Navbar.Brand>
@@ -103,4 +111,19 @@ const NavPage = (props) => {
         </Navbar >
     )
 }
-export default NavPage
+const mapStateToProps = (state) => {
+    return {
+        chart: state.chartReducer.chart
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(
+        {
+            get_chart,
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavPage)

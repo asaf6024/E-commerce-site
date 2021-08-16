@@ -30,7 +30,7 @@ const Food = (props) => {
                     onClick={() => history.push(`/product/${product.id}`)}
                 ></i> */}
                 <p>{product.description}</p>
-                <b>{product.price} ₪</b>
+                <b className='productPrice'>{product.price} ₪</b>
                 <button className='btn' onClick={() =>
                     classActive != '' ? history.push(`/food/update/${product.id}`) : history.push(`/food/add/${product.id}`)
                 }>

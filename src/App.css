@@ -107,6 +107,9 @@ hr {
 .headlineOfProduct {
   font-size: xxx-large;
 }
+.productPrice {
+  font-style: italic;
+}
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);

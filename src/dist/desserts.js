@@ -2,7 +2,7 @@ const desserts = [
     {
         id: 31,
         name: 'Ice Cream',
-        description: 'Tasty coffee',
+        description: 'Tasty Ice Cream',
         longDescription:
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
@@ -23,7 +23,7 @@ const desserts = [
     {
         id: 32,
         name: 'Chocolate Souffle',
-        description: 'Tasty coffee',
+        description: 'Tasty Chocolate Souffle',
         longDescription:
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
@@ -44,7 +44,7 @@ const desserts = [
     {
         id: 33,
         name: 'Cheese Cake',
-        description: 'Tasty coffee',
+        description: 'Tasty Cheese Cake',
         longDescription:
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,

@@ -29,7 +29,7 @@ const Desert = (props) => {
                     onClick={() => history.push(`/product/${product.id}`)}
                 ></i> */}
                 <p>{product.description}</p>
-                <b>{product.price} ₪</b>
+                <b className='productPrice'>{product.price} ₪</b>
                 <button className='btn' onClick={() =>
                     classActive != '' ? history.push(`/desserts/update/${product.id}`) : history.push(`/desserts/add/${product.id}`)
                 }>
