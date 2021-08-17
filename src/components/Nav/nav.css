@@ -109,6 +109,7 @@ a:hover {
   }
   .titleOfNav.navbar-brand {
     position: relative;
+    font-size: small;
     top: 15px;
     left: 50%;
     color: #fff;

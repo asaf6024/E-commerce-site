@@ -15,9 +15,6 @@ const desserts = [
             {
                 name: 'glass', price: '20', selected: false
             },
-            {
-                name: 'x-large', price: '30', selected: false
-            }
         ]
     },
     {
@@ -48,11 +45,11 @@ const desserts = [
         longDescription:
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         `,
-        price: 15,
+        price: 17,
         img: '../img/cheeseCake.jpg',
         sizes: [
             {
-                name: 'small', price: '15', selected: true
+                name: 'small', price: '17', selected: true
             },
             {
                 name: 'medium', price: '20', selected: false

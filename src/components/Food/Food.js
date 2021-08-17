@@ -9,6 +9,7 @@ import { bindActionCreators } from "redux";
 import { getFood } from '../../redux/food/food-actions'
 import { get_chart, delete_chart_by_id } from '../../redux/chart/chart-actions';
 import searchByText from '../../dist/functions/serach';
+import LoadData from '../LoadData';
 
 const Food = (props) => {
     let history = useHistory()
@@ -85,15 +86,17 @@ const Food = (props) => {
 
 
     return (
-        <div className="container-fluid" id='food'>
-            <MDBContainer>
-                <h2 className='text-center font-weight-bold headlineOfProduct'>Food <i className="fas fa-utensils "></i>
-                </h2>
+        // <div className="container-fluid" id='food'>
+        //     <MDBContainer>
+        <>
+            {/* <h2 className='text-center font-weight-bold headlineOfProduct'>Food <i className="fas fa-utensils "></i>
+                </h2> */}
 
-                {/* <a href='/#drinks'>
+            {/* <a href='/#drinks'>
                     <i className="fas fa-arrow-down DownArrow fa-2x"></i>
                 </a> */}
-                {
+
+            {/* {
                     !props.isHome &&
                     <MDBRow>
                         <MDBCol sm='12'>
@@ -127,16 +130,29 @@ const Food = (props) => {
                             </MDBCard>
                         </MDBCol>
                     </MDBRow>
-                }
+                } */}
 
-                <MDBRow>
-                    {
-                        props.food != undefined &&
-                        loadFood
-                    }
-                </MDBRow>
-            </MDBContainer>
-        </div>
+            <MDBRow>
+                {
+                    props.food != undefined &&
+                    <>
+                        <LoadData
+                            data={props.food}
+                            get_chart={get_chart}
+                            chart={props.chart}
+                            typeOfProduct={'food'}
+                            icon={`fas fa-utensils`}
+                            delete_chart_by_id={props.delete_chart_by_id}
+                            isHome={props.isHome}
+                        />
+
+                        {/* loadFood */}
+                    </>
+                }
+            </MDBRow>
+        </>
+        //     </MDBContainer>
+        // </div>
     )
 }
 const mapStateToProps = (state) => {

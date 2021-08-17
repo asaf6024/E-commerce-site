@@ -36,10 +36,11 @@ const Update = (props) => {
         // console.log('quantity', quantity)
         copiedArray.map(copied => {
 
-            copied.quantity = quantity;
-            copied.totalPrice = Number(quantity) != undefined ? Number(quantity) * Number(priceOfOrder) : 1 * Number(priceOfOrder);
-            copied.price = priceOfOrder
+            copied.quantity = quantity != undefined ? quantity : document.getElementById('quantity').value;
+            copied.totalPrice = quantity != undefined ? Number(quantity) * (
+                priceOfOrder != null ? Number(priceOfOrder) : copied.price) : document.getElementById('quantity').value * Number(priceOfOrder)
 
+            copied.price = priceOfOrder
             copied.sizes.forEach(s => {
                 if (s.price == priceOfOrder) {
                     s.selected = true;

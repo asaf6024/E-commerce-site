@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { getProducts } from '../../redux/products/products-actions';
 import { get_chart, delete_chart_by_id } from '../../redux/chart/chart-actions';
+import LoadData from '../LoadData';
 
 const Products = (props) => {
     let history = useHistory()
@@ -63,13 +64,12 @@ const Products = (props) => {
 
 
     return (
-        <div className="container-fluid" id='drinks'>
-            <MDBContainer>
-                <h2 className='text-center font-weight-bold headlineOfProduct'>Drinks <i className="fas fa-glass-cheers"></i></h2>
-                {/* <a href='/#desserts'>
+        <>
+            {/* <h2 className='text-center font-weight-bold headlineOfProduct'>Drinks <i className="fas fa-glass-cheers"></i></h2> */}
+            {/* <a href='/#desserts'>
                     <i className="fas fa-arrow-down DownArrow fa-2x"></i>
                 </a> */}
-                {
+            {/* {
                     !props.isHome &&
                     <MDBRow>
                         <MDBCol sm='12'>
@@ -103,14 +103,28 @@ const Products = (props) => {
                             </MDBCard>
                         </MDBCol>
                     </MDBRow>
+                } */}
+            <MDBRow>
+                {
+                    props.products != undefined &&
+                    <>
+                        <LoadData
+                            data={props.products}
+                            get_chart={get_chart}
+                            chart={props.chart}
+                            typeOfProduct={'drinks'}
+                            icon={'fas fa-glass-cheers'}
+                            delete_chart_by_id={props.delete_chart_by_id}
+                            isHome={props.isHome}
+                        />
+
+                        {/* loadFood */}
+                    </>
+
+                    // loadProducts
                 }
-                <MDBRow>
-                    {
-                        loadProducts
-                    }
-                </MDBRow>
-            </MDBContainer>
-        </div>
+            </MDBRow>
+        </>
     )
 }
 const mapStateToProps = (state) => {

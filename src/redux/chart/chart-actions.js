@@ -36,7 +36,7 @@ export const update_chart_by_id = (product) => {
 };
 export const delete_chart_by_id = (id) => {
     console.log('dalete', id)
-    alert('Deleted from shoping cart')
+    // alert('Deleted from shoping cart')
     return (dispatch) => {
         dispatch({
             type: "DELETE_CHART_BY_ID",
@@ -45,7 +45,7 @@ export const delete_chart_by_id = (id) => {
     }
 };
 export const delete_chart = (id) => {
-    alert('Deleted all shoping cart')
+    // alert('Deleted all shoping cart')
     return (dispatch) => {
         dispatch({
             type: "DELETE_CHART",

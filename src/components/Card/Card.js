@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import { useHistory } from "react-router-dom";
 import './card.css'
+// Redux
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { delete_chart_by_id } from '../../redux/chart/chart-actions';
+
 const Card = (props) => {
     const history = useHistory()
 
@@ -85,9 +90,10 @@ const Card = (props) => {
                                     }>
                                         <span>{p.totalPrice != null ? 'Update' : 'Add to Shopping cart'}</span>
                                     </button>
-                                    {p.totalPrice != null &&
-                                        <button className=' trashButton btn-danger col-sm-10' onClick={(e) => {
-                                            props.deleteChart(props.productId)
+                                    {console.log('p.totalPrice', props.chart)}
+                                    {p.totalPrice != undefined && props.chart.length > 0 &&
+                                        < button className=' trashButton btn-danger col-sm-10' onClick={(e) => {
+                                            props.delete_chart_by_id(props.productId)
                                             history.push(`../add/${p.id}`)
                                         }
                                         }>
@@ -99,11 +105,27 @@ const Card = (props) => {
                             </MDBCol>
                         </MDBRow>
 
-                    </MDBCard>
+                    </MDBCard >
 
 
                 )
         })
     )
 }
-export default Card
+const mapStateToProps = (state) => {
+    return {
+        chart: state.chartReducer.chart
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(
+        {
+
+            delete_chart_by_id
+        },
+        dispatch
+    );
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card)

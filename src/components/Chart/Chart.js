@@ -129,7 +129,7 @@ const ChartCom = (props) => {
                                                             <br />
                                                             <div className='buttonsOfCart'>
                                                                 <button className='chartButton col-sm-12' onClick={() =>
-                                                                    history.push(p.id < 10 ? `/product/update/${p.id}` : p.id < 30 ? `/food/update/${p.id}` : `/desserts/update/${p.id}`)
+                                                                    history.push(p.id < 10 ? `/drinks/update/${p.id}` : p.id < 30 ? `/food/update/${p.id}` : `/desserts/update/${p.id}`)
                                                                 }>
                                                                     Update</button>
                                                                 <button className='trashButton btn-danger col-sm-12'>
