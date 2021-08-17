@@ -26,7 +26,7 @@ export const add_to_chart = (product) => {
 };
 export const update_chart_by_id = (product) => {
     console.log('update function', product)
-    alert('Updated successfully')
+    // alert('Updated successfully')
     return (dispatch) => {
         dispatch({
             type: "UPDATE_CHART_BY_ID",

@@ -30,7 +30,7 @@ const ChartCom = (props) => {
 
     const setLocalStorage = () => {
         localStorage.setItem('cart', JSON.stringify(props.chart));
-        alert('Saved')
+        // alert('Saved')
         history.push('/cart')
 
 
