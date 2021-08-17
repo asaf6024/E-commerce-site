@@ -92,7 +92,7 @@ const ChartCom = (props) => {
                                             </MDBCol>
                                             <MDBCol sm='11' className='text-left' style={{ margin: '15px auto' }}>
                                                 <MDBCard className='text-center' key={p.id}>
-                                                    <MDBRow>
+                                                    <MDBRow className='rowOfCart'>
                                                         <MDBCol sm='12' lg='6' className='productDetailsCard'>
                                                             <img className='cardImg' src={p.img} />
 
@@ -111,7 +111,7 @@ const ChartCom = (props) => {
                                                                     })
                                                                 }
                                                                 <br />
-                                                                <b className='col   -sm-8'>Price:</b>
+                                                                <b className='col-sm-8'>Price:</b>
 
                                                                 {
                                                                     p.sizes.map((size, index) => {
@@ -127,15 +127,17 @@ const ChartCom = (props) => {
                                                                 <span>{p.totalPrice} ₪ </span>
                                                             </div>
                                                             <br />
-                                                            <button className='chartButton col-sm-10' onClick={() =>
-                                                                history.push(p.id < 10 ? `/product/update/${p.id}` : p.id < 30 ? `/food/update/${p.id}` : `/desserts/update/${p.id}`)
-                                                            }>
-                                                                Update</button>
-                                                            <button className='trashButton btn-danger col-sm-10'>
-                                                                <span onClick={() => props.delete_chart_by_id(p.id)
+                                                            <div className='buttonsOfCart'>
+                                                                <button className='chartButton col-sm-12' onClick={() =>
+                                                                    history.push(p.id < 10 ? `/product/update/${p.id}` : p.id < 30 ? `/food/update/${p.id}` : `/desserts/update/${p.id}`)
                                                                 }>
-                                                                    Remove from cart</span>
-                                                            </button>
+                                                                    Update</button>
+                                                                <button className='trashButton btn-danger col-sm-12'>
+                                                                    <span onClick={() => props.delete_chart_by_id(p.id)
+                                                                    }>
+                                                                        Remove from cart</span>
+                                                                </button>
+                                                            </div>
 
                                                         </MDBCol>
                                                     </MDBRow>

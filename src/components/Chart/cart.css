@@ -13,3 +13,23 @@ button {
   /* text-align: center; */
   transform: translateX(-50%) translateY(-50%);
 }
+/* .productDetailsCard {
+  padding: 0 !important;
+  margin: 0 !important;
+} */
+.rowOfCart {
+  margin: 0 !important;
+}
+.buttonsOfCart {
+  margin-top: 50px;
+}
+/* .buttonsOfCart .trashButton {
+  position: absolute !important;
+  left: 0;
+  bottom: 0;
+}
+.buttonsOfCart .chartButton {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+} */

@@ -109,11 +109,11 @@ const food = [
         longDescription:
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. .
         `,
-        price: 10,
+        price: 50,
         img: '../img/chicken.jpg',
         sizes: [
             {
-                name: 'medium', price: '40', selected: false
+                name: 'medium', price: '50', selected: false
             },
             {
                 name: 'large', price: '60', selected: false
