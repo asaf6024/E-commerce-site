@@ -23,7 +23,7 @@ const ChartCom = (props) => {
     })
 
     useEffect(() => {
-        console.log('chart data2', props.chart)
+        // console.log('chart data2', props.chart)
         setLoad(false)
 
     }, [])
@@ -81,7 +81,7 @@ const ChartCom = (props) => {
 
                                 props.chart.map((p, index) => {
                                     toalOfAll += p.totalPrice
-                                    console.log('chart data', p)
+                                    // console.log('chart data', p)
                                     // setCurrentPrice(() => p.sizes[0].price)
                                     let qnt;
                                     return (

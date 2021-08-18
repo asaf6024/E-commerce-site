@@ -7,7 +7,7 @@ export const getDesserts = () => {
     }
 };
 export const getDessertById = (id) => {
-    console.log('id is', id)
+    // console.log('id is', id)
     return (dispatch) => {
         dispatch({
             type: "GET_DESSERT_BY_ID",

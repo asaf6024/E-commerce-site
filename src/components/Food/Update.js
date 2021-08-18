@@ -16,6 +16,7 @@ const Update = (props) => {
     // let currentPrice = 10;
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
+    const [messege, setMessege] = useState('')
     useEffect(() => {
         window.scroll(0, 0)
         props.getFoodById(foodId)
@@ -55,7 +56,9 @@ const Update = (props) => {
         })
 
         // console.log('obj', obj)
-        props.update_chart_by_id(copiedArray[0])
+        props.update_chart_by_id(copiedArray[0]).then(() => {
+            setMessege('Updated successfully!')
+        })
     }
     const setQunatityForUpdate = (qnt) => {
         setQunatity(qnt)
@@ -87,6 +90,7 @@ const Update = (props) => {
                                     currentPrice={currentPrice}
                                     updateForChart={updateForChart}
                                     deleteChart={deleteChart}
+                                    messege={messege}
                                 />
                             }
 

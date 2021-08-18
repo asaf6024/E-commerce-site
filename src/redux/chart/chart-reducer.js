@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    console.log('chart is', state)
+    // console.log('chart is', state)
     switch (action.type) {
         case "GET_CHART":
             return { ...state };

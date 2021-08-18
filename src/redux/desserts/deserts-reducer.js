@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    console.log('state is', state)
+    // console.log('state is', state)
     switch (action.type) {
         case "GET_DESSERTS":
             return { ...state.desserts };

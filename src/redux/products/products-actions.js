@@ -7,7 +7,7 @@ export const getProducts = () => {
     }
 };
 export const getProductById = (id) => {
-    console.log('id is', id)
+    // console.log('id is', id)
     return (dispatch) => {
         dispatch({
             type: "GET_PRODUCT_BY_ID",

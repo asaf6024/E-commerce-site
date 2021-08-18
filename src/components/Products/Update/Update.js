@@ -16,6 +16,8 @@ const Update = (props) => {
     // let currentPrice = 10;
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
+    const [messege, setMessege] = useState('')
+
     useEffect(() => {
         window.scroll(0, 0)
         props.get_chart_by_id(productId)
@@ -31,7 +33,7 @@ const Update = (props) => {
         let priceOfOrder = document.getElementById('size').value
         let copiedArray = [...props.product]
         let price = 0;
-        console.log('price element', document.getElementById('quantity').value)
+        // console.log('price element', document.getElementById('quantity').value)
 
         // console.log('quantity', quantity)
         copiedArray.map(copied => {
@@ -53,7 +55,9 @@ const Update = (props) => {
         })
 
 
-        props.update_chart_by_id(copiedArray[0])
+        props.update_chart_by_id(copiedArray[0]).then(() => {
+            setMessege('Updated successfully!')
+        })
     }
     const setQunatityForUpdate = (qnt) => {
         setQunatity(qnt)
@@ -75,6 +79,7 @@ const Update = (props) => {
                         <MDBCol sm='12'>
                             {
                                 <Card
+                                    messege={messege}
                                     isUpdate={true}
                                     productId={productId}
                                     data={props.chart}

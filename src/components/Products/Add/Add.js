@@ -42,7 +42,7 @@ const Add = (props) => {
             if (index + 1 == id)
                 s.selected = true
         })
-        console.log(chosen[0].sizes)
+        // console.log(chosen[0].sizes)
 
     }
 
@@ -68,8 +68,10 @@ const Add = (props) => {
                 'totalPrice': Number(quantity) * Number(price)
             }
         ]
-        props.add_to_chart(obj)
-        history.push(`../update/${productId}`)
+        props.add_to_chart(obj).then(() => {
+            history.push(`../update/${productId}`)
+
+        })
 
     }
     return (

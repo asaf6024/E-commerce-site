@@ -16,6 +16,8 @@ const UpdateDessert = (props) => {
     // let currentPrice = 10;
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
+    const [messege, setMessege] = useState('')
+
     useEffect(() => {
         window.scroll(0, 0)
         props.getDessertById(dessertId)
@@ -54,7 +56,9 @@ const UpdateDessert = (props) => {
 
         })
 
-        props.update_chart_by_id(copiedArray[0])
+        props.update_chart_by_id(copiedArray[0]).then(() => {
+            setMessege('Updated successfully!')
+        })
     }
     const setQunatityForUpdate = (qnt) => {
         setQunatity(qnt)
@@ -77,6 +81,7 @@ const UpdateDessert = (props) => {
                         <MDBCol sm='12'>
                             {
                                 <Card
+                                    messege={messege}
                                     isUpdate={true}
                                     productId={dessertId}
                                     data={props.chart}

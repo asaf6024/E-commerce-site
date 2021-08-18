@@ -82,19 +82,21 @@ const Card = (props) => {
 
                                 </div>
                                 <br />
+                                <p>{props.messege}</p>
                                 <div className='updateButtons'>
 
                                     <button className='chartButton col-sm-10' onClick={() => {
                                         props.updateForChart()
                                     }
                                     }>
-                                        <span>{p.totalPrice != null ? 'Update' : 'Add to Shopping cart'}</span>
+                                        <span>{props.isUpdate ? 'Update' : 'Add to Shopping cart'}</span>
                                     </button>
-                                    {console.log('p.totalPrice', props.chart)}
-                                    {p.totalPrice != undefined && props.chart.length > 0 &&
+                                    {/* {console.log('p.totalPrice', props.chart)} */}
+                                    {props.isUpdate && props.chart.length > 0 &&
                                         < button className=' trashButton btn-danger col-sm-10' onClick={(e) => {
-                                            props.delete_chart_by_id(props.productId)
-                                            history.push(`../add/${p.id}`)
+                                            props.delete_chart_by_id(props.productId).then(() => {
+                                                history.push(`../add/${p.id}`)
+                                            })
                                         }
                                         }>
                                             <span >

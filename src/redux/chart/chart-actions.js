@@ -1,7 +1,7 @@
 
 export const get_chart = () => {
     return (dispatch) => {
-        console.log('in getChart')
+        // console.log('in getChart')
         dispatch({
             type: "GET_CHART"
         });
@@ -22,26 +22,29 @@ export const add_to_chart = (product) => {
             type: "ADD_TO_CHART",
             payload: product
         });
+        return Promise.resolve();
     }
 };
 export const update_chart_by_id = (product) => {
-    console.log('update function', product)
+    // console.log('update function', product)
     // alert('Updated successfully')
     return (dispatch) => {
         dispatch({
             type: "UPDATE_CHART_BY_ID",
             payload: product
         });
+        return Promise.resolve();
     }
 };
 export const delete_chart_by_id = (id) => {
-    console.log('dalete', id)
+    // console.log('dalete', id)
     // alert('Deleted from shoping cart')
     return (dispatch) => {
         dispatch({
             type: "DELETE_CHART_BY_ID",
             payload: id
         });
+        return Promise.resolve();
     }
 };
 export const delete_chart = (id) => {

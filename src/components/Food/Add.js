@@ -17,7 +17,6 @@ const Add = (props) => {
     const [currentPrice, setCurrentPrice] = useState(null)
     const [quantity, setQunatity] = useState(1)
     const [size, setSize] = useState('small')
-
     useEffect(() => {
         window.scroll(0, 0)
         props.getFoodById(foodId)
@@ -49,8 +48,9 @@ const Add = (props) => {
                 'totalPrice': Number(quantity) * Number(price)
             }
         ]
-        props.add_to_chart(obj)
-        history.push(`../update/${foodId}`)
+        props.add_to_chart(obj).then(() => {
+            history.push(`../update/${foodId}`)
+        })
 
     }
     return (
