@@ -13,6 +13,7 @@ export const get_chart_by_id = (id) => {
             type: "GET_CHART_BY_ID",
             payload: id
         });
+        return Promise.resolve();
     }
 };
 export const add_to_chart = (product) => {
