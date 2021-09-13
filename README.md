@@ -6,7 +6,7 @@ A simple React Redux app that displays a Restaurant menu weather from a fake API
 - Food object
 - Drinks object
 - Desserts object
-- 
+
 ![Home Page](https://my-portfolio-asaf.netlify.app/img/websites/ecommerce.jpg)
 
 
