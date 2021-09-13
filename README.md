@@ -1,7 +1,7 @@
 # E-Commerce demo
 ##  [Live Demo](https://e-commerce-asaf.netlify.app/)
 
-A simple React Redux app that displays a Restaurant menu weather from a fake API (local objects):
+A simple React Redux app that displays a Restaurant menu from a fake API (local Objects):
 
 - Food object
 - Drinks object
