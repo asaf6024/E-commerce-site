@@ -1,48 +1,70 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
-import Home from './pages/Home'
-import Add from './components/Products/Add/Add'
-import AddFood from './components/Food/Add'
-import Chart from './components/Chart/Chart';
-import { MDBContainer } from 'mdbreact';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//Pages
+// import Home from './pages/Home'
+// import FoodPage from './pages/FoodPage';
+// import DrinkPage from './pages/DrinkPage';
+// import DesertPage from './pages/DesertPage';
+// import Chart from './components/Chart/Chart';
+
+
 import Nav from './components/Nav/Nav';
-import Update from './components/Products/Update/Update';
+import Footer from './components/Footer/Footer';
+
+//Food
+import AddFood from './components/Food/Add'
 import UpdateFood from './components/Food/Update';
-import FoodPage from './pages/FoodPage';
-import DrinkPage from './pages/DrinkPage';
-import DesertPage from './pages/DesertPage';
+
+//Drinks
+import Add from './components/Products/Add/Add'
+import Update from './components/Products/Update/Update';
+
+//Desserts
 import AddDessert from './components/Dessert/AddDessert'
 import UpdateDessert from './components/Dessert/UpdateDessert'
-import Footer from './components/Footer/Footer';
+
+//Pages
+const Home = React.lazy(() => import('./pages/Home'));
+const FoodPage = React.lazy(() => import('./pages/FoodPage'));
+const DrinkPage = React.lazy(() => import('./pages/DrinkPage'));
+const DesertPage = React.lazy(() => import('./pages/DesertPage'));
+const Chart = React.lazy(() => import('./components/Chart/Chart'));
 
 function App() {
   return (
     <div>
+
       <Router>
         <Nav />
-        <Switch>
-          {/* pages */}
-          <Route exact path="/" component={Home} />
-          <Route exact path="/food/" component={FoodPage} />
-          <Route exact path="/drinks/" component={DrinkPage} />
-          <Route exact path="/desserts/" component={DesertPage} />
-          {/* Drinks */}
-          <Route exact path="/drinks/add/:productId" component={Add} />
-          <Route exact path="/drinks/update/:productId" component={Update} />
-          <Route exact path="/cart" component={Chart} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
 
-          {/* Food */}
-          <Route exact path="/food/add/:foodId" component={AddFood} />
-          <Route exact path="/food/update/:foodId" component={UpdateFood} />
+            {/* pages */}
+            <Route exact path="/" component={Home} />
+            <Route exact path="/food/" component={FoodPage} />
+            <Route exact path="/drinks/" component={DrinkPage} />
+            <Route exact path="/desserts/" component={DesertPage} />
+            <Route exact path="/cart" component={Chart} />
 
-          {/* Dessert */}
-          <Route exact path="/desserts/add/:dessertId" component={AddDessert} />
-          <Route exact path="/desserts/update/:dessertId" component={UpdateDessert} />
+            {/* Drinks */}
+            <Route exact path="/drinks/add/:productId" component={Add} />
+            <Route exact path="/drinks/update/:productId" component={Update} />
 
-        </Switch>
+            {/* Food */}
+            <Route exact path="/food/add/:foodId" component={AddFood} />
+            <Route exact path="/food/update/:foodId" component={UpdateFood} />
+
+            {/* Dessert */}
+            <Route exact path="/desserts/add/:dessertId" component={AddDessert} />
+            <Route exact path="/desserts/update/:dessertId" component={UpdateDessert} />
+
+          </Switch>
+        </Suspense>
+
       </Router>
+
       <Footer />
     </div>
 
