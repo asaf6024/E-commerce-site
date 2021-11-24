@@ -8,17 +8,19 @@ const Landing = () => {
 
                 <MDBRow>
                     <MDBCol sm='12' lg='8' style={{ margin: 'auto' }}>
-                        <MDBCard style={{ minHeight: '70vh' }}>
+                        <MDBCard style={{ minHeight: '70vh', backgroundColor: 'rgb(255 255 255 / 20%)' }}>
                             <div className='text-center' style={{ margin: 'auto' }}>
-                                <h1 className='font-weight-bold text-dark'>Welcome to a demo of <br />E-commerce site:<br />
+                                <i className="fas fa-mug-hot fa-7x text-white"></i>
+                                <br />
+                                <br />
+
+                                <h1 className='font-weight-bold text-white'>Coffee shop <br />
                                 </h1>
                                 <br />
-                                <h2 className='font-weight-bold text-dark'>coffee shop</h2>
-                                <i className="fas fa-mug-hot fa-5x text-dark"></i>
-                                <br />
-                                <br />
-                                <p className='text-dark h3'>Please choose your products below </p>
-                                <a className='text-dark' href='/#food'><i className="fas fa-arrow-down fa-3x text-dark" ></i></a>
+                                <h2 className='font-weight-bold text-white'>My E-commerce site</h2>
+
+                                {/* <p className='text-dark h3'>Please choose your products below </p> */}
+                                <a className='text-dark' href='/#food'><i className="fas fa-angle-down fa-3x text-white" ></i></a>
                             </div>
                         </MDBCard>
 

@@ -29,7 +29,7 @@ const Card = (props) => {
                 : (
 
                     <MDBCard className='text-center productDetailsCard' key={p.id}>
-                        <MDBRow>
+                        <MDBRow className='rowOfProduct'>
                             <MDBCol sm='12' lg='6'>
                                 <img className='cardImg' src={`../${p.img}`} />
 

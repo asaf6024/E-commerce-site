@@ -92,7 +92,7 @@ const ChartCom = (props) => {
                                             </MDBCol>
                                             <MDBCol sm='11' className='text-left' style={{ margin: '15px auto' }}>
                                                 <MDBCard className='text-center' key={p.id}>
-                                                    <MDBRow className='rowOfCart'>
+                                                    <MDBRow className='rowOfProduct'>
                                                         <MDBCol sm='12' lg='6' className='productDetailsCard'>
                                                             <img className='cardImg' src={p.img} />
 

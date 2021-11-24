@@ -34,7 +34,7 @@ const Chart = React.lazy(() => import('./components/Chart/Chart'));
 
 function App() {
   return (
-    <div>
+    <div className='rootBackround'>
 
       <Router>
         <Nav />
