@@ -10,8 +10,7 @@ export default function (state = initialState, action) {
         case "GET_CHART":
             return { ...state };
         case "GET_CHART_BY_ID":
-            // return { ...state.chart.forEach(c => c.id == action.payload) }
-            // return { ...state, chart: state.chart.filter(c => c.id == action.payload) }
+
             return {
                 // Again copy the entire state object
                 ...state,

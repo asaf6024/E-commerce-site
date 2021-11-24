@@ -5,7 +5,7 @@ const initialState = {
     foo: []
 };
 
-export default function (state = initialState, action) {
+export default function foodReducer(state = initialState, action) {
     // console.log('state is', state)
     switch (action.type) {
         case "GET_FOOD":
