@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <p>This site created Buy
-                <a href='https://github.com/asaf6024' target='_blank'> @Asaf Almog&nbsp;</a>
+                <a href='https://github.com/asaf6024' title='https://github.com/asaf6024' target='_blank'> @Asaf Almog&nbsp;</a>
                 2021</p>
         </div>
     )
