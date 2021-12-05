@@ -30,7 +30,7 @@ const ChartCom = (props) => {
 
     const setLocalStorage = () => {
         localStorage.setItem('cart', JSON.stringify(props.chart));
-        // alert('Saved')
+        alert('Saved')
         history.push('/cart')
 
 
@@ -61,14 +61,18 @@ const ChartCom = (props) => {
 
                             </div>
                             : <MDBCol sm='12' className='text-center'>
-                                <button className='btn bg-white' onClick={() => setLocalStorage()}>
+                                <button className='btn bg-white' onClick={() => setLocalStorage()}
+                                    style={{ textTransform: 'initial' }}
+                                >
                                     <i className="far fa-save"></i>&nbsp;
                                     Save Shopping Cart for later
                                 </button>
                                 {
                                     JSON.parse(localStorage.getItem('cart')) != null &&
-                                    <button className='btn bg-white' onClick={() => deleteLocalStorage()}>
-                                        delete saved
+                                    <button className='btn bg-white' onClick={() => deleteLocalStorage()}
+                                        style={{ textTransform: 'initial' }}
+                                    >
+                                        Delete saved
                                     </button>
                                 }
 
@@ -159,7 +163,8 @@ const ChartCom = (props) => {
                             !load &&
                             <MDBCol sm='12' className='text-center'>
                                 <MDBCard>
-                                    <h2 className='text-dark'>Total is: {toalOfAll} ₪ </h2>
+                                    <h2 className='text-dark' style={{ textTransform: 'initial' }}
+                                    >Total is: {toalOfAll} ₪ </h2>
                                 </MDBCard>
                             </MDBCol>
                         }

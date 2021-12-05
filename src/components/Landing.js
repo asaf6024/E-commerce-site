@@ -17,7 +17,9 @@ const Landing = () => {
                                 <h1 className='font-weight-bold text-white'>Coffee shop <br />
                                 </h1>
                                 <br />
-                                <h2 className='font-weight-bold text-white'>My E-commerce site</h2>
+                                <h2 className='font-weight-bold text-white' style={{ textTransform: "initial" }}>
+                                    My E-commerce site
+                                </h2>
 
                                 {/* <p className='text-dark h3'>Please choose your products below </p> */}
                                 <a className='text-dark' href='/#food'><i className="fas fa-angle-down fa-3x text-white" ></i></a>

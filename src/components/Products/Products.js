@@ -29,7 +29,7 @@ const Products = (props) => {
         let classActive = ''
         disabled = ''
         props.chart.map(c => c.id == product.id ? classActive = 'active' : '')
-        { console.log('product', product) }
+        // { console.log('product', product) }
 
         return <MDBCol lg='4' sm='12' className='text-center'>
             <MDBCard key={product.id} className={`productCard ${classActive}`}>

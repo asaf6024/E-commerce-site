@@ -10,8 +10,8 @@ html {
   font-weight: bold;
 }
 .backBtn:hover span {
-  color: #ffffff;
-  background: rgb(33, 37, 41);
+  color: #ffffff75;
+  /* background: rgb(33, 37, 41); */
 }
 .chartButton {
   width: 100%;
