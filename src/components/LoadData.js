@@ -46,7 +46,7 @@ const LoadData = (props) => {
     })
 
     return (
-        <div className="container-fluid loadDataDiv" id='food'>
+        <div className="container-fluid loadDataDiv animated fadeIn" id='food'>
             <MDBContainer>
                 <h2 className='text-center font-weight-bold headlineOfProduct'>{props.typeOfProduct} <i className={`${props.icon}`}></i>
                 </h2>
