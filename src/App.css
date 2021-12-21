@@ -69,7 +69,7 @@ img:hover {
   background-position: 50%;
   background: url(./dist/img/myBackground2.jpg) center center / cover no-repeat
     fixed;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 #root .rootBackround {
   /* background: linear-gradient(
